@@ -1,0 +1,165 @@
+body {
+	font-family: Cooper Hewitt;
+  font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #ffffff;
+  letter-spacing: 1px;
+	color: #000000;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.intro {
+  margin: 0 20px 40px 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px dotted #D1A900;
+  text-align: center;
+}
+
+.beer-block  {
+  background-color: #ffffff;
+  border: solid 1px transparent;
+  color: #000000;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.beer-block:hover {
+  border: solid 1px #D1A900;
+  cursor: pointer;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+	color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+	outline: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+button span  {
+    position: relative;
+    padding-bottom: 5px;
+   	transition: all 0.5s;
+}
+
+button span:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: #D1A900;
+  transition: all 0.5s;
+}
+
+button:hover span:after {
+  width: 100%;
+  left: 0;
+}
+
+.show-limited .show-limited span:after,
+.show-favourites .show-favourites span:after,
+.show-crates .show-crates span:after,
+.show-all .show-all span:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  height: 2px;
+  width: 100%;
+  background-color: #D1A900;
+}
+
+button div {
+  margin-bottom: 5px;
+}
+
+.beerimage {
+  background-color: #ffffff;
+}
+
+.show-favourites .beer,
+.show-crates .beer, 
+.show-limited .beer {
+  display: none;
+}
+
+
+.show-favourites .beer[data-our-favourites], 
+.show-crates .beer[data-crates] ,
+.show-limited .beer[data-limited-edition] {
+  display: block;
+}
+
+.show-all .beer {
+  display: block;
+}
+
+.price {
+  font-weight: 700;
+}
+
+hr {
+		box-sizing: content-box;
+    height: 0px;
+    overflow: visible;
+    width: 10%;
+    border-style: solid;
+    border-color: #D1A900;
+ 	  margin-top: 10px;
+}
+
+.brewery  {
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.primary {
+  font-size: 14px;
+  background-color: #D1A900;
+  padding: 8px 12px 6px 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width:750px) {
+
+  body {
+    font-size: 14px;
+  }
+  
+  .w-25-ns {
+    width: 50%;
+  } 
+}
+
+@media (max-width:600px) {  
+  
+  button img {
+    display: none;
+  }  
+}
+
+@media (max-width:480px) {
+  
+  .w-25-ns {
+    width: 100%;
+  } 
+}
